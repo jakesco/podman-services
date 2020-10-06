@@ -4,4 +4,5 @@ A collection of scrips to build services in podman containers. Requires `buildah
 
 ## Containers
 
-* [A Dark Room](https://github.com/doublespeakgames/adarkroom)
+* [A Dark Room](https://github.com/doublespeakgames/adarkroom): A fun idle game running in browser. Good for simple web testing.
+* *LAMP*: A basic PHP - MYSQL setup.
