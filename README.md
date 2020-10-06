@@ -5,4 +5,4 @@ A collection of scrips for building services in podman containers. Requires `bui
 ## Containers
 
 * [A Dark Room](https://github.com/doublespeakgames/adarkroom): A fun idle game running in browser. Good for simple web testing.
-* *LAMP*: A basic PHP - MYSQL setup.
+* **LAMP**: A basic PHP - MYSQL setup.
