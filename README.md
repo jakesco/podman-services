@@ -1,6 +1,6 @@
-# podman-services
+# Podman Services Collection
 
-A collection of scrips to build services in podman containers. Requires `buildah` and `podman`. Most of these can be converted to Docker containers by converting the `buildah` commands to a `Dockerfile`.
+A collection of scrips for building services in podman containers. Requires `buildah` and `podman`. Many of these use base images are from DockerHub and can be converted to Docker containers by translating the `buildah` commands to a `Dockerfile`.
 
 ## Containers
 
