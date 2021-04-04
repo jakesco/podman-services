@@ -1,0 +1,8 @@
+PubkeyAuthentication yes
+AuthorizedKeysFile	.ssh/authorized_keys
+PasswordAuthentication no
+AllowAgentForwarding no
+AllowTcpForwarding no
+X11Forwarding no
+PermitTTY no
+Subsystem	sftp	/usr/libexec/openssh/sftp-server

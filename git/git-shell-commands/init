@@ -1,0 +1,26 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+    echo "usage: init <name>"
+    exit 1
+fi
+
+base_dir="$HOME/repos"
+new_repo="$1"
+
+case $new_repo in
+    *\.git)
+	;;
+    *)
+	new_repo="${new_repo}.git"
+	;;
+esac
+
+if [ -d "$new_repo" ]; then
+    echo "$new_repo already exists"
+    exit 1
+fi
+
+mkdir "$base_dir/$new_repo"
+git init --bare "$base_dir/$new_repo" >/dev/null 2>&1\
+    && echo "Initialized empty Git repository: $new_repo"

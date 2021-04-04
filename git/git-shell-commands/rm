@@ -1,0 +1,28 @@
+#!/bin/sh
+
+if [ $# -ne 1 ]; then
+    echo "usage: rm <name>"
+    exit 1
+fi
+
+base_dir="$HOME/repos"
+target="$1"
+
+case $target in
+    *\.git)
+	;;
+    *)
+	target="${target}.git"
+	;;
+esac
+
+if [ -d "$target" ]; then
+    printf "Confirm delete? [y/N] "
+    read -r confirm
+    if [ $(echo ${confirm} | tr '[:upper:]' '[:lower:]') = "y" ]; then
+	    rm -rf "${base_dir:?}/${target:?}" \
+	    && echo "Deleted Git repository ${target}"
+    fi
+else
+    echo "$target does not exist."
+fi
