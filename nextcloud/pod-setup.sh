@@ -19,7 +19,7 @@ NEXTCLOUD_ADMIN="admin"
 NEXTCLOUD_PASSWORD="password"
 
 # Create Pod
-podman pod create --hostname ${PODNAME} --name ${PODNAME} -p 127.0.0.1:8080:80
+podman pod create --hostname ${PODNAME} --name ${PODNAME} -p 127.0.0.1:9000:80
 
 # MariaDB
 podman run \
