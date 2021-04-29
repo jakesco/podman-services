@@ -8,3 +8,14 @@ A collection of scrips for building services in podman containers. Requires `bui
 * **LAMP**: A basic PHP - MYSQL setup.
 * **Git**: Git server.
 * **Nextcloud**: Nextcloud pod with MariaDB and Redis.
+
+# Automatic start on boot
+
+Since podman doesn't have a daemon, starting containers on boot is handled by systemd. For rootless containers run:
+```bash
+podman generate systemd -nf
+```
+and put the resulting .service file into `~/.config/systemd/user/`.
+Activate the service with `systemctl --user enable --now <container>.service`.
+
+This will only start the container on user login. To restart on system boot, run `loginctl enable-linger <username>`.
